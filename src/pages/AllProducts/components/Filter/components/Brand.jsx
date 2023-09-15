@@ -14,10 +14,12 @@ export default function Brand() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [openBrand, setOpenBrand] = React.useState(false);
   const [brand, setBrand] = React.useState({
-    IKEA: false,
-    CB2: false,
-    "Herman Miller": false,
-    "Ashley Furniture": false,
+    'APPLE': false,
+    'SAMSUNG': false,
+    'WALTON': false,
+    'INFINITY': false,
+    "ZARA": false,
+    "PRAN": false,
   });
 
   const firstUpdate = React.useRef(true);
@@ -74,50 +76,64 @@ export default function Brand() {
             onChange={(e) => {
               setBrand({
                 ...brand,
-                IKEA: !brand["IKEA"],
+                APPLE: !brand["APPLE"],
               });
             }}
           >
-            <FilterCheckBox label="IKEA" checked={brand["IKEA"]} />
+            <FilterCheckBox label="APPLE" checked={brand["APPLE"]} />
+          </ListItemButton>
+          <ListItemButton
+            onChange={(e) => {
+              setBrand({
+                ...brand,
+                SAMSUNG: !brand["SAMSUNG"],
+              });
+            }}
+          >
+            <FilterCheckBox label="SAMSUNG" checked={brand["SAMSUNG"]} />
           </ListItemButton>
 
           <ListItemButton
             onChange={(e) => {
               setBrand({
                 ...brand,
-                "Herman Miller": !brand["Herman Miller"],
+                WALTON: !brand["WALTON"],
               });
             }}
           >
-            <FilterCheckBox
-              label="Herman Miller"
-              checked={brand["Herman Miller"]}
-            />
+            <FilterCheckBox label="WALTON" checked={brand["WALTON"]} />
           </ListItemButton>
 
           <ListItemButton
             onChange={(e) => {
               setBrand({
                 ...brand,
-                CB2: !brand["CB2"],
+                INFINITY: !brand["INFINITY"],
               });
             }}
           >
-            <FilterCheckBox label="CB2" checked={brand["CB2"]} />
+            <FilterCheckBox label="INFINITY" checked={brand["INFINITY"]} />
           </ListItemButton>
 
           <ListItemButton
             onChange={(e) => {
               setBrand({
                 ...brand,
-                "Ashley Furniture": !brand["Ashley Furniture"],
+                ZARA: !brand["ZARA"],
               });
             }}
           >
-            <FilterCheckBox
-              label="Ashley Furniture"
-              checked={brand["Ashley Furniture"]}
-            />
+            <FilterCheckBox label="ZARA" checked={brand["ZARA"]} />
+          </ListItemButton>
+          <ListItemButton
+            onChange={(e) => {
+              setBrand({
+                ...brand,
+                PRAN: !brand["PRAN"],
+              });
+            }}
+          >
+            <FilterCheckBox label="PRAN" checked={brand["PRAN"]} />
           </ListItemButton>
         </List>
       </Collapse>

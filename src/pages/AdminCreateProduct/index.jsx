@@ -6,6 +6,15 @@ import { adminCreateProduct } from "../../lib/axiosAPI";
 import DisplayPending from "../../components/DisplayPending";
 import Alert from "@mui/material/Alert";
 
+const categories = [
+  "Electronics",
+  "Health",
+  "Womens",
+  "Mens",
+  "Groceries",
+  "Life-Style",
+];
+
 export default function AdminCreateProduct() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -25,6 +34,10 @@ export default function AdminCreateProduct() {
   const [error, setError] = React.useState();
   const [createSuccess, setCreateSuccess] = React.useState(false);
 
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
+  };
+
   const submitHandler = async (e) => {
     e.preventDefault();
     window.scrollTo(0, 0);
@@ -39,7 +52,7 @@ export default function AdminCreateProduct() {
     formData.append("name", name);
     formData.append("description", description);
     formData.append("category", category);
-    formData.append("brand", brand);
+    formData.append("brand", brand.toUpperCase());
     formData.append("price", price);
     formData.append("countInStock", stock);
     formData.append("newArrivals", newArrivals);
@@ -96,14 +109,29 @@ export default function AdminCreateProduct() {
           ></textarea>
         </div>
         <div className="auth__input__container">
-          <label>Category: </label>
+          {/* <label>Category: </label>
           <input
             id="update_category"
             type="text"
             onChange={(e) => setCategory(e.target.value)}
             value={category}
             required
-          />
+          /> */}
+
+          <label htmlFor="update_category">Category: </label>
+          <select
+            id="update_category"
+            onChange={handleCategoryChange}
+            value={category}
+            required
+          >
+            <option value="">Select a category</option>
+            {categories.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="auth__input__container">
           <label htmlFor="update_brand">Brand: </label>

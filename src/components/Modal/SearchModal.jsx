@@ -33,17 +33,17 @@ export default function SearchModal({ openModal, setOpenModal }) {
           <div className="search-modal__body">
             <h1>Popular Search</h1>
             <div className="search-modal__popular-search">
-              <div onClick={() => handleRedirect("/shop?search=chair")}>
-                Chair
+              <div onClick={() => handleRedirect("/shop?search=phone")}>
+                phone
               </div>
-              <div onClick={() => handleRedirect("/shop?search=lamp")}>
-                Lamp
+              <div onClick={() => handleRedirect("/shop?search=Dress")}>
+                Dress
               </div>
-              <div onClick={() => handleRedirect("/shop?search=bench")}>
-                Bench
+              <div onClick={() => handleRedirect("/shop?search=Beauty")}>
+                Beauty
               </div>
-              <div onClick={() => handleRedirect("/shop?search=table%20decor")}>
-                Table Decor
+              <div onClick={() => handleRedirect("/shop?search=Wheat")}>
+                Wheat
               </div>
             </div>
           </div>
