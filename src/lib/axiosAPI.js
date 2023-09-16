@@ -2,7 +2,9 @@ import axios from "axios";
 
 // export const baseURL = "https://www.stable-store.com";
 // export const baseURL = "http://localhost:5000";
-export const baseURL = "http://103.147.106.150:5000";
+// export const baseURL = "http://103.147.106.150:5000";
+export const baseURL = "https://evening-basin-46496-7b2d6abc723d.herokuapp.com";
+
 
 export const getRecommendProducts = async () => {
   return await axios.get(`${baseURL}/api/products/recommend`);
