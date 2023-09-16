@@ -48,7 +48,7 @@ export default function OrderPage() {
                 </div>
 
                 <div className="orders_listing_header_totalPrice">
-                  $ {order.totalPrice / 100}
+                  $ {order.totalPrice}
                 </div>
 
                 <div

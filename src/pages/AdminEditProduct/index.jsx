@@ -140,7 +140,7 @@ export default function AdminEditProduct() {
           />
         </div>
         <div className="auth__input__container">
-          <label htmlFor="update_price">Price (In Cent): </label>
+          <label htmlFor="update_price">Price (In BDT): </label>
           <input
             id="update_price"
             type="number"

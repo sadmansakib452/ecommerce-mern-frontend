@@ -17,7 +17,7 @@ export default function AddCart({ productInfo, count, setCount }) {
   return (
     <div className="productDetailPage__pricesContainer">
       <div className="productDetailPage__price">
-        $ {productInfo.price}
+        BDT {productInfo.price}
       </div>
       <div className="productDetailPage__addCart">
         {productInfo.countInStock > 0 ? (

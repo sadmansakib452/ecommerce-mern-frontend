@@ -90,7 +90,7 @@ export default function AdminProductList() {
                 <tr key={product._id}>
                   <td>{product._id}</td>
                   <td>{product.name}</td>
-                  <td>$ {product.price}</td>
+                  <td>BDT {product.price}</td>
                   <td>{product.category}</td>
                   <td>
                     <img

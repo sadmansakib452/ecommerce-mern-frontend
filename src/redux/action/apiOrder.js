@@ -22,6 +22,7 @@ export const startStripeCheckOut = (order) => {
           Bearer: `${user.token}`,
         },
       };
+      console.log('from api order: ', order)
       const { data } = await axios.post(
         `${baseURL}/stripe/create-checkout-session`,
         order,

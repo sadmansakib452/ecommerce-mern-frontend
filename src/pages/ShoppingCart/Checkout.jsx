@@ -19,7 +19,7 @@ export default function Checkout({ cartItems, userInfo }) {
   return (
     <div className="cart_checkout">
       <h1 className="cart_checkout__subtotal">
-        Subtotal: $
+        Subtotal: BDT 
         {cartItems
           .reduce((init, a) => {
             return init + (a.price * a.qty);

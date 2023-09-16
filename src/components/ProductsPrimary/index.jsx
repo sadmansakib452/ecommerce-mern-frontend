@@ -21,7 +21,7 @@ export default function ProductsPrimary({ product }) {
       />
       <h1>{product.name}</h1>
       <Ratings product={product} />
-      <h2>$ {product.price}</h2>
+      <h2>BDT {product.price}</h2>
       {product.isNewArrival && (
         <div className="productCard__isNewTag">New!</div>
       )}
